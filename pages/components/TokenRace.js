@@ -105,19 +105,20 @@ const TokenRace = () => {
     window.open(`https://dexscreener.com/base/${pairAddress}`, "_blank");
   };
 
-  if (loading) return <div className="text-center">Loading...</div>;
+  if (loading) return <div className="text-center"></div>;
   if (error) return <div className="text-center text-red-500">{error}</div>;
 
   const maxFDV = Math.max(...pairsData.map((pair) => parseFloat(pair.fdv)));
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-2xl sm:text-3xl font-bold mb-6 text-center">
+      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-center">
         Token Race by FDV on Base 🔵
       </h1>
-      <div className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] w-full border-b-2 border-gray-300">
+      <div className="relative h-[80vh] w-full border-b-2 border-gray-300">
         {pairsData.map((data, index) => {
-          const topPosition = (1 - parseFloat(data.fdv) / maxFDV) * 100;
+          const topPosition =
+            index === 0 ? 10 : (1 - parseFloat(data.fdv) / maxFDV) * 90 + 10;
           const leftPosition = (index / (pairsData.length - 1)) * 100;
           return (
             <div
@@ -130,14 +131,16 @@ const TokenRace = () => {
                 <img
                   src={data.customLogoURI}
                   alt={data.baseToken.symbol}
-                  className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full mb-1 sm:mb-2"
+                  className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full mb-1 sm:mb-2"
                 />
                 <div className="bg-white p-1 sm:p-2 rounded shadow-md text-center">
-                  <p className="font-bold text-xs sm:text-sm">
+                  <p className="font-bold text-[10px] sm:text-xs md:text-sm">
                     {data.baseToken.symbol}
                   </p>
-                  <p className="text-xs sm:text-sm">{formatFDV(data.fdv)}</p>
-                  <p className="text-xs sm:text-sm">
+                  <p className="text-[8px] sm:text-xs md:text-sm">
+                    {formatFDV(data.fdv)}
+                  </p>
+                  <p className="text-[8px] sm:text-xs md:text-sm">
                     {formatPriceChange(data.priceChange.h24)}
                   </p>
                 </div>
