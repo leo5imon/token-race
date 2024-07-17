@@ -24,7 +24,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://imagedelivery.net/uzmvUOBJ09s_IX7VWocbxw/1b366467-f4fa-44e4-88f1-90dd366e3900/public"
+          content="https://imagedelivery.net/uzmvUOBJ09s_IX7VWocbxw/1a917650-08d5-4635-3b09-ed82bf64f300/public"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -37,7 +37,7 @@ export default function Home() {
         />
         <meta
           name="twitter:image"
-          content="https://imagedelivery.net/uzmvUOBJ09s_IX7VWocbxw/1b366467-f4fa-44e4-88f1-90dd366e3900/public"
+          content="https://imagedelivery.net/uzmvUOBJ09s_IX7VWocbxw/1a917650-08d5-4635-3b09-ed82bf64f300/public"
         />
         <meta property="og:url" content="https://basedrace.fun/"></meta>
       

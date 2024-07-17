@@ -111,9 +111,9 @@ const TokenRace = () => {
   const maxFDV = Math.max(...pairsData.map((pair) => parseFloat(pair.fdv)));
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-center">
-        Token Race by FDV on Base 🔵
+    <div className="w-full max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8 py-4 sm:py-6 md:py-8">
+      <h1 className="text-lg sm:text-2xl md:text-3xl font-bold mb-4 sm:mb-6 text-center">
+        Based Memecoin Race 🔵
       </h1>
       <div className="relative h-[80vh] w-full border-b-2 border-gray-300">
         {pairsData.map((data, index) => {
@@ -124,23 +124,26 @@ const TokenRace = () => {
             <div
               key={data.pairAddress}
               className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
-              style={{ top: `${topPosition}%`, left: `${leftPosition}%` }}
+              style={{ 
+                top: `${topPosition}%`, 
+                left: `${Math.max(5, Math.min(95, leftPosition))}%` 
+              }}
               onClick={() => handleTokenClick(data.pairAddress)}
             >
               <div className="flex flex-col items-center">
                 <img
                   src={data.customLogoURI}
                   alt={data.baseToken.symbol}
-                  className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full mb-1 sm:mb-2"
+                  className="w-5 h-5 sm:w-8 sm:h-8 md:w-10 md:h-10 rounded-full mb-1 sm:mb-2"
                 />
                 <div className="bg-white p-1 sm:p-2 rounded shadow-md text-center">
-                  <p className="font-bold text-[10px] sm:text-xs md:text-sm">
+                  <p className="font-bold text-[8px] sm:text-xs md:text-sm">
                     {data.baseToken.symbol}
                   </p>
-                  <p className="text-[8px] sm:text-xs md:text-sm">
+                  <p className="text-[6px] sm:text-xs md:text-sm">
                     {formatFDV(data.fdv)}
                   </p>
-                  <p className="text-[8px] sm:text-xs md:text-sm">
+                  <p className="text-[6px] sm:text-xs md:text-sm">
                     {formatPriceChange(data.priceChange.h24)}
                   </p>
                 </div>
