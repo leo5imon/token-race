@@ -27,7 +27,7 @@ Set-up the tokens you want to retrieve on the .json files and pick the method yo
 ## Contribution
 
 _Contributions are welcome!_
-If you would like to contribute to Magi, please follow these steps:
+If you would like to contribute, please follow these steps:
 
 - Fork the repository.
 - Create a new branch for your feature or bug fix.
