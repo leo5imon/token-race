@@ -22,8 +22,7 @@ npm install
 npm run dev
 ```
 
-Set-up the tokens you want to retrieve on the .json files and pick the method you want to use : CMC or DexScreener
-No API key needed for the latter.
+Set-up the tokens you want to retrieve on the .json files and pick the method you want to use : CMC or DexScreener. No API key needed for the latter.
 
 ## Contribution
 
