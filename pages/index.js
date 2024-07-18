@@ -1,6 +1,6 @@
 import Head from "next/head";
 import React from "react";
-import TokenRace from "./components/TokenRace";
+import AIRace from "./components/AIRace";
 import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
@@ -9,18 +9,18 @@ export default function Home() {
       <Head>
         <link rel="icon" href="favicon.ico" sizes="32x32" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-        <title>Based Memecoin Race</title>
+        <title>Token Race</title>
         <meta
           name="description"
-          content="Find the best Farcaster memes with AI, share them and fucking win."
+          content="Find out who's leading the token."
         />
         <meta
           property="og:title"
-          content="Based Memecoin Race - Who's the leading memecoin on Base ?"
+          content="Token Race - Who's the leading token ?"
         />
         <meta
           property="og:description"
-          content="Find out who's leading the memecoin race on Base."
+          content="Find out who's leading the token."
         />
         <meta
           property="og:image"
@@ -29,11 +29,11 @@ export default function Home() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Based Memecoin Race - Who's the leading memecoin on Base ?"
+          content="Token Race - Who's the leading token ?"
         />
         <meta
           name="twitter:description"
-          content="Find out who's leading the memecoin race on Base."
+          content="Find out who's leading the token."
         />
         <meta
           name="twitter:image"
@@ -43,7 +43,7 @@ export default function Home() {
       
       </Head>
       <main>
-        <TokenRace />
+        <AIRace />
         <Analytics />
       </main>
     </>
